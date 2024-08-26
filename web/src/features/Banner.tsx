@@ -1,5 +1,8 @@
+"use client"
+
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import Image from 'next/image'
+import Autoplay from 'embla-carousel-autoplay'
 
 const IMAGE_BANNER = [
   '/Images/banner1.jpg',
@@ -18,7 +21,14 @@ const IMAGE_BANNER = [
 export default function Banner() {
   return (
     <div className="flex gap-2">
-      <Carousel className="group w-10/12 bg-default">
+      <Carousel
+        className="bg-default group w-10/12"
+        plugins={[
+          Autoplay({
+            delay: 7000
+          })
+        ]}
+      >
         <CarouselContent>
           {IMAGE_BANNER.map((image, index) => (
             <CarouselItem key={index}>
@@ -33,7 +43,7 @@ export default function Banner() {
       <div className="bg-download w-2/12 p-2">
         <div className="flex items-center gap-3">
           <Image src="/Images/icon-logo.png" alt="Icon logo Lazada" width={45} height={30} />
-          <p className="text-six font-medium text-sm uppercase">Try Lazada app</p>
+          <p className="text-six text-sm font-medium uppercase">Try Lazada app</p>
         </div>
         <div className="text-default relative mt-2">
           <Image src="/Images/bg-download.png" alt="Background download" width={250} height={250} />
@@ -62,7 +72,7 @@ export default function Banner() {
             <Image src="/Images/img-google-play.png" alt="Icon google play" width={100} height={50} />
           </div>
         </div>
-        <p className='text-xs'>Download the App now by scanning the QR code</p>
+        <p className="text-xs">Download the App now by scanning the QR code</p>
       </div>
     </div>
   )
