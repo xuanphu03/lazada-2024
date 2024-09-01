@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Login from '@/features/Login'
 
 const NAVHEADER = [
   {
@@ -29,7 +30,8 @@ const NAVHEADER = [
   {
     id: 6,
     title: 'Login',
-    color: 'text-foreground'
+    color: 'text-foreground',
+    chilrend: <Login />
   },
   {
     id: 7,

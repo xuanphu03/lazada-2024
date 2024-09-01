@@ -33,6 +33,9 @@ const config = {
         five: 'hsl(var(--five))',
         six: 'hsl(var(--six))',
         default: 'hsl(var(--default))',
+        lazmall: 'hsl(var(--lazmall))',
+        vouchers: 'hsl(var(--vouchers))',
+        topup: 'hsl(var(--topup))',
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))'
